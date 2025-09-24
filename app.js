@@ -1,5 +1,3 @@
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-// app.js
 
 let amigos = [];
 
@@ -7,27 +5,27 @@ function agregarAmigo() {
     let inputAmigo = document.getElementById('amigo');
     let nombreAmigo = inputAmigo.value.trim();
 
-    // NUEVA VALIDACIÓN: Revisar si el nombre contiene números
+    // Revisar si el nombre contiene números
     if (/\d/.test(nombreAmigo)) {
         alert('El nombre no puede contener números. Por favor, intenta de nuevo.');
         inputAmigo.value = '';
         return; // Detiene la función
     }
 
-    // VALIDACIÓN: Revisar que el campo no esté vacío
+    // VRevisar que el campo no esta vacío
     if (nombreAmigo === '') {
         alert('Por favor, escribe el nombre de un amigo.');
         return;
     }
 
-    // VALIDACIÓN: Revisar que el nombre no esté ya en la lista
+    // Revisar que el nombre no esté ya en la lista
     if (amigos.map(amigo => amigo.toLowerCase()).includes(nombreAmigo.toLowerCase())) {
         alert('Este nombre ya ha sido agregado. Por favor, introduce un nombre diferente.');
         inputAmigo.value = '';
         return;
     }
     
-    // Si todas las validaciones pasan, se agrega el amigo
+    // se agrega el amigo
     amigos.push(nombreAmigo);
     actualizarListaAmigos();
 
@@ -55,7 +53,7 @@ function sortearAmigo() {
     }
 }
 
-// Función para mezclar los elementos de un array (Algoritmo Fisher-Yates)
+// Función para mezclar los elementos
 function embaralhar(lista) {
     for (let indice = lista.length; indice; indice--) {
         const indiceAleatorio = Math.floor(Math.random() * indice);
@@ -79,4 +77,5 @@ function reiniciar() {
     document.getElementById('listaAmigos').innerHTML = '';
     document.getElementById('resultado').innerHTML = '';
     document.getElementById('amigo').focus();
+
 }
