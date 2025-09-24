@@ -8,7 +8,7 @@
     --color-white: #FFFFFF;
 }
 
-/* Estilos generales */
+
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +30,7 @@ body {
     width: 100%;
 }
 
-/* Banner */
+
 .header-banner {
     flex: 40%;
     display: flex;
@@ -142,7 +142,7 @@ ul {
     text-align: center;
 }
 
-/* Botón de sortear título */
+/* Botón de sortear */
 .button-draw {
     display: flex;
     align-items: center;
@@ -160,3 +160,4 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
